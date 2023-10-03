@@ -10,13 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*my_memmove(void *dest, const void *src, int n)
+#include "libft.h"
+
+void	*ft_memmove(void *s1, const void *s2, size_t n)
 {
 	unsigned char		*d;
 	const unsigned char	*s;
 
-	d = dest;
-	s = src;
+	d = (unsigned char *)s1;
+	s = (const unsigned char *)s2;
 	if (s < d && s + n > d)
 	{
 		s += n;
@@ -33,5 +35,5 @@ void	*my_memmove(void *dest, const void *src, int n)
 			*d++ = *s++;
 		}
 	}
-	return (dest);
+	return (s1);
 }
