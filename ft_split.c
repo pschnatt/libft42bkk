@@ -6,7 +6,7 @@
 /*   By: scrattan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 13:22:09 by scrattan          #+#    #+#             */
-/*   Updated: 2023/10/04 13:22:09 by scrattan         ###   ########.fr       */
+/*   Updated: 2023/10/17 09:35:51 by scrattan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	count_words(char const *str, char c)
 {
-	int i;
-	int trigger;
+	int	i;
+	int	trigger;
 
 	i = 0;
 	trigger = 0;
@@ -46,14 +46,15 @@ char	*word_dup(char const *str, int start, int finish)
 	return (word);
 }
 
-char		**ft_split(char const *str, char c)
+char	**ft_split(char const *str, char c)
 {
 	size_t	i;
 	size_t	j;
 	int		index;
 	char	**split;
 
-	if (!str || !(split = malloc((count_words(str, c) + 1) * sizeof(char *))))
+	split = malloc((count_words(str, c) + 1) * sizeof(char *));
+	if (str == NULL || split == NULL)
 		return (0);
 	i = 0;
 	j = 0;

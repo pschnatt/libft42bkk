@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: scrattan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: scrattan <scrattan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 13:22:36 by scrattan          #+#    #+#             */
-/*   Updated: 2023/10/04 13:22:36 by scrattan         ###   ########.fr       */
+/*   Updated: 2023/10/17 09:46:36 by scrattan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 				j++;
 			}
 			j = 0;
-		}	
+		}
 		i++;
 	}
 	return (NULL);

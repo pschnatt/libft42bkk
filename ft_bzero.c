@@ -6,7 +6,7 @@
 /*   By: scrattan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 13:26:02 by scrattan          #+#    #+#             */
-/*   Updated: 2023/09/17 13:31:21 by scrattan         ###   ########.fr       */
+/*   Updated: 2023/10/17 08:51:29 by scrattan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	char *p;
+	char	*p;
 
 	p = (char *)s;
 	while (n > 0)
