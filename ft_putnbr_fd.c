@@ -6,7 +6,7 @@
 /*   By: scrattan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 04:00:26 by scrattan          #+#    #+#             */
-/*   Updated: 2023/10/17 09:28:34 by scrattan         ###   ########.fr       */
+/*   Updated: 2023/10/24 13:32:27 by scrattan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	long	l;
 
+	if (fd < 1)
+		return ;
 	l = (long) n;
 	if (l < 0)
 	{

@@ -6,7 +6,7 @@
 /*   By: scrattan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 13:21:22 by scrattan          #+#    #+#             */
-/*   Updated: 2023/10/23 12:33:05 by scrattan         ###   ########.fr       */
+/*   Updated: 2023/10/24 20:14:02 by scrattan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,13 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*mem;
+	size_t	sizen;
 
-	mem = malloc(nmemb * size);
-	if (mem == NULL)
+	sizen = (nmemb * size);
+	mem = malloc(sizen);
+	if (nmemb == SIZE_MAX || size == SIZE_MAX)
 		return (NULL);
-	else
+	if (sizen)
 		ft_memset(mem, 0, nmemb * size);
 	return (mem);
 }

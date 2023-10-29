@@ -6,7 +6,7 @@
 /*   By: scrattan <scrattan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 13:22:53 by scrattan          #+#    #+#             */
-/*   Updated: 2023/10/17 09:51:12 by scrattan         ###   ########.fr       */
+/*   Updated: 2023/10/24 18:17:53 by scrattan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*mem;
-	int		slen;
-	int		count;
+	char			*mem;
+	unsigned int	slen;
+	unsigned int	count;
 
 	mem = malloc(len + 1);
 	if (mem == NULL)

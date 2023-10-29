@@ -6,7 +6,7 @@
 /*   By: scrattan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 13:21:11 by scrattan          #+#    #+#             */
-/*   Updated: 2023/10/17 08:41:11 by scrattan         ###   ########.fr       */
+/*   Updated: 2023/10/24 13:11:33 by scrattan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_atoi(const char *str)
 
 	num = 0;
 	sign = 1;
-	while (*str == 32 || *str >= 9 && *str <= 13)
+	while (*str == 32 || (*str >= 9 && *str <= 13))
 		str++;
 	if (*str == '+' || *str == '-')
 	{

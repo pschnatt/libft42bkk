@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: scrattan <scrattan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: scrattan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 13:55:48 by scrattan          #+#    #+#             */
-/*   Updated: 2023/10/17 09:03:18 by scrattan         ###   ########.fr       */
+/*   Updated: 2023/10/24 13:24:55 by scrattan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,6 @@ int	digitcount(int n, int sign)
 
 char	*itoa_helper(char *mem, int memlen, int sign, long n)
 {
-	memlen = digitcount(n, sign);
-	mem = malloc(memlen + 1);
 	mem[memlen] = '\0';
 	if (n == 0)
 		mem[0] = '0';
@@ -60,6 +58,8 @@ char	*ft_itoa(int n)
 		sign = -1;
 	if (n < 0)
 		nbr = -nbr;
+	memlen = digitcount(nbr, sign);
+	mem = malloc(memlen + 1);
 	mem = itoa_helper(mem, memlen, sign, nbr);
 	return (mem);
 }

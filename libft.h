@@ -6,7 +6,7 @@
 /*   By: scrattan <scrattan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 13:23:02 by scrattan          #+#    #+#             */
-/*   Updated: 2023/10/17 10:44:54 by scrattan         ###   ########.fr       */
+/*   Updated: 2023/10/24 20:01:27 by scrattan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdint.h>
 
 typedef struct s_list
 {

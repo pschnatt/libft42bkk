@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: scrattan <scrattan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: scrattan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 13:22:21 by scrattan          #+#    #+#             */
-/*   Updated: 2023/10/17 09:42:10 by scrattan         ###   ########.fr       */
+/*   Updated: 2023/10/24 13:13:12 by scrattan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	index = 0;
 	while (*s1)
 	{
-		mem[index++] == *s1;
+		mem[index++] = *s1;
 		s1++;
 	}
 	while (*s2)
 	{
-		mem[index++] == *s2;
+		mem[index++] = *s2;
 		s2++;
 	}
 	mem[index] = '\0';
