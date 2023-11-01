@@ -6,7 +6,7 @@
 /*   By: scrattan <scrattan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 13:22:39 by scrattan          #+#    #+#             */
-/*   Updated: 2023/10/17 09:46:49 by scrattan         ###   ########.fr       */
+/*   Updated: 2023/10/24 18:09:39 by scrattan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)s + i);
 	while (i >= 0)
 	{
-		if (s[i] == c)
+		if (s[i] == (char) c)
 			return ((char *)s + i);
 		i--;
 	}

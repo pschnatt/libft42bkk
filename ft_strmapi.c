@@ -6,7 +6,7 @@
 /*   By: scrattan <scrattan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 00:54:54 by scrattan          #+#    #+#             */
-/*   Updated: 2023/10/17 09:46:10 by scrattan         ###   ########.fr       */
+/*   Updated: 2023/10/31 15:06:35 by scrattan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*mem;
 
 	mem = malloc(ft_strlen(s) + 1);
+	if (mem == NULL)
+		return (NULL);
 	i = 0;
 	while (s[i])
 	{

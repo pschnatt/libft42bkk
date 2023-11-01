@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: scrattan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: scrattan <scrattan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 13:22:09 by scrattan          #+#    #+#             */
-/*   Updated: 2023/10/17 09:35:51 by scrattan         ###   ########.fr       */
+/*   Updated: 2023/10/24 17:04:51 by scrattan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +48,10 @@ char	*word_dup(char const *str, int start, int finish)
 
 char	**ft_split(char const *str, char c)
 {
-	size_t	i;
-	size_t	j;
-	int		index;
 	char	**split;
+	int		i;
+	int		j;
+	int		index;
 
 	split = malloc((count_words(str, c) + 1) * sizeof(char *));
 	if (str == NULL || split == NULL)

@@ -6,7 +6,7 @@
 /*   By: scrattan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 03:53:39 by scrattan          #+#    #+#             */
-/*   Updated: 2023/10/17 09:29:34 by scrattan         ###   ########.fr       */
+/*   Updated: 2023/10/24 13:32:39 by scrattan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	if (fd < 1)
+		return ;
 	write(fd, s, ft_strlen(s));
 }

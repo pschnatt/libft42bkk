@@ -6,46 +6,69 @@
 /*   By: scrattan <scrattan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 13:22:45 by scrattan          #+#    #+#             */
-/*   Updated: 2023/10/17 09:56:56 by scrattan         ###   ########.fr       */
+/*   Updated: 2023/10/24 19:20:08 by scrattan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_malloc_index(char const *src, size_t start, size_t end)
+int	is_set(char c, char const *set)
 {
-	char	*mem;
-	size_t	count;
+	while (*set)
+	{
+		if (c == *set)
+			return (1);
+		set++;
+	}
+	return (0);
+}
 
-	mem = malloc(end - start + 2);
-	if (mem == NULL)
-		return (NULL);
-	count = 0;
-	while (start <= end)
-		mem[count++] = src[start++];
-	mem[count] = '\0';
-	return (mem);
+int	size_trim(char const *str, char const *set)
+{
+	int	size;
+	int	cnt;
+	int	idx_last_chr;
+
+	cnt = 0;
+	while (is_set(str[cnt], set))
+		cnt++;
+	size = cnt - 1;
+	idx_last_chr = -1;
+	while (str[cnt])
+	{
+		if (!is_set(str[cnt], set))
+			idx_last_chr = cnt;
+		cnt++;
+	}
+	if (idx_last_chr == -1)
+		return (-1);
+	size = idx_last_chr - size;
+	return (size);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	len;
-	size_t	start;
-	size_t	end;
+	char	*str;
+	int		cnt;
+	int		size;
 
-	len = ft_strlen(set);
-	start = 0;
-	if (ft_strncmp(s1, (char *)set, len) == 0)
-		start = len;
-	end = ft_strlen(s1) - len - 1;
-	while (len)
+	if (!set)
+		return ((char *)s1);
+	if (!s1 || *s1 == 0 || size_trim(s1, set) == -1)
 	{
-		if (s1[ft_strlen(s1) - len] != set[ft_strlen(set) - len])
-		{
-			end = ft_strlen(s1) - 1;
-			break ;
-		}
-		len--;
+		str = (char *) malloc(1);
+		*str = 0;
+		return (str);
 	}
-	return ((char *)ft_malloc_index(s1, start, end));
+	size = size_trim(s1, set);
+	str = (char *) malloc(size + 1);
+	if (!str)
+		return (NULL);
+	while (is_set(*s1, set))
+		s1++;
+	cnt = -1;
+	while (++cnt < size)
+		*str++ = *s1++;
+	*str = 0;
+	return (str - size);
 }
